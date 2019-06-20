@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Draggable</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <style>
+        #draggable {
+            width: 170px;
+            height: 150px;
+            padding: 0.5em;
+        }
+        #buttons{
+            visibility: hidden;
+        }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#draggable" ).draggable();
+        } );
+        function show() {
+            $("#buttons").css("visibility","visible")
+
+        }
+        function red() {
+            document.getElementById("draggable").style.backgroundColor="red"
+
+        }
+        function blueviolet() {
+            document.getElementById("draggable").style.backgroundColor="blueviolet"
+
+        }
+        function brown() {
+            document.getElementById("draggable").style.backgroundColor="brown"
+
+        }
+        function yellow() {
+            document.getElementById("draggable").style.backgroundColor="yellow"
+
+        }
+    </script>
+</head>
+<body>
+<div id="draggable" class="ui-widget-content">
+    <textarea></textarea>
+
+    <p>Drag me around</p>
+    <button id="visible" onclick="show()">chage background</button>
+    <button id="hide" onclick="hide()">hide </button>
+    <div id="buttons">
+        <button style="width: 20px;height: 20px;background-color: red;border-radius: 100%"onclick="red()"></button>
+        <button style="width: 20px;height: 20px;background-color: blueviolet;border-radius: 100%"onclick="blueviolet()"></button>
+        <button style="width: 20px;height: 20px;background-color: brown;border-radius: 100%"onclick="brown()"></button>
+        <button style="width: 20px;height: 20px;background-color: yellow;border-radius: 100%"onclick="yellow()"></button>
+
+
+    </div>
+</div>
+
+
+</body>
+</html>
